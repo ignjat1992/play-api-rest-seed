@@ -42,6 +42,7 @@ class Account @Inject() (val messagesApi: MessagesApi) extends api.ApiController
         }
     }
   }
+  
 
   def delete = SecuredApiAction { implicit request =>
     ApiToken.delete(request.token).flatMap { _ =>
